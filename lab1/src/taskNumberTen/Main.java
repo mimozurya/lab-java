@@ -59,6 +59,11 @@ public class Main {
                 arrFirstXY[i][2] == arrSecondXY[j][2] && arrFirstXY[i][3] == arrSecondXY[j][3]) {
                     answer++;
                 }
+                if (i+2 == countHoleFirstKey) {
+                    if ((arrSecondXY[j][3] - arrSecondXY[j][1]) + (arrFirstXY[i][3] - arrFirstXY[i][1]) > arrFirstXY[i+1][1] - (arrFirstXY[i][3] - arrFirstXY[i][1])) {
+                        answer++;
+                    }
+                }
             }
         }
         return answer;
