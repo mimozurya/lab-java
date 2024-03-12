@@ -55,12 +55,16 @@ public class Main {
 
         for (int i = 0; i < countHoleFirstKey; i++) {
             for (int j = 0; j < countHoleSecondKey; j++) {
-                if (arrFirstXY[i][0] == arrSecondXY[j][0] && arrFirstXY[i][1] == arrSecondXY[j][1] &&
-                arrFirstXY[i][2] == arrSecondXY[j][2] && arrFirstXY[i][3] == arrSecondXY[j][3]) {
+                /*if ((arrSecondXY[j][0] <= arrFirstXY[i][0] || arrSecondXY[j][1] <= arrFirstXY[i][1])
+                && (arrSecondXY[j][2] >= arrFirstXY[i][2] || arrSecondXY[j][3] >= arrFirstXY[i][3])) {
                     answer++;
-                }
+                }*/
+
                 if (i+2 == countHoleFirstKey) {
-                    if ((arrSecondXY[j][3] - arrSecondXY[j][1]) + (arrFirstXY[i][3] - arrFirstXY[i][1]) > arrFirstXY[i+1][1] - (arrFirstXY[i][3] - arrFirstXY[i][1])) {
+                    if (((arrSecondXY[j][2] - arrSecondXY[j][0]) + (arrFirstXY[i][2] - arrFirstXY[i][0]) >
+                            arrFirstXY[i+1][0] - (arrFirstXY[i][2] - arrFirstXY[i][0])) &&
+                            ((arrSecondXY[j][3] - arrSecondXY[j][1]) + (arrFirstXY[i][3] - arrFirstXY[i][1]) <
+                            arrFirstXY[i+1][1] - (arrFirstXY[i][3] - arrFirstXY[i][1]))) {
                         answer++;
                     }
                 }
