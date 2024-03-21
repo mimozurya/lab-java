@@ -18,7 +18,4 @@ public class Solution {
         }
         System.out.println(Arrays.deepToString(arrayChairs));
     }
-    public static String[] findSwap (int[] NM, int[][] arrayChairs) {
-
-    }
 }
